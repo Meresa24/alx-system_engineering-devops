@@ -16,7 +16,7 @@ apt-get -y install --no-install-recommends software-properties-common
 add-apt-repository -y ppa:vbernat/haproxy-2.4
 apt-get -y install haproxy
 # the load balancer's configuration
-DOMAIN_NAME='b3zaleel-alx.tech'
+DOMAIN_NAME='mgidey.tech'
 INIT_FILE='/etc/default/haproxy'
 CONFIG_FILE='/etc/haproxy/haproxy.cfg'
 HAPROXY_LB_CONFIG=\
@@ -24,8 +24,8 @@ HAPROXY_LB_CONFIG=\
 #--$DOMAIN_NAME-params-begin--
 backend $DOMAIN_NAME-backend
         balance roundrobin
-        server web1 34.73.0.174:80 check
-        server web2 35.196.78.105:80 check
+        server 101469-web-01 34.207.121.86:80 check
+        server 101469-web-02 100.26.169.172:80 check
 
 frontend $DOMAIN_NAME-frontend
         bind *:80
